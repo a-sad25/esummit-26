@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BITD E-SUMMIT 2026</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700&display=swap" rel="stylesheet">
+
+<style>
+html{scroll-behavior:smooth;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+font-family:'Orbitron',sans-serif;
+background:
+linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.9)),
+url("bg.jpg");
+background-size:110%;
+background-position:center;
+background-attachment:fixed;
+animation:zoom 40s infinite alternate;
+color:white;
+overflow-x:hidden;
+}
+@keyframes zoom{from{background-size:110%;}to{background-size:120%;}}
+
+/* NAVBAR */
+.navbar{
+position:fixed;
+top:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 30px;
+background:rgba(0,0,0,0.7);
+backdrop-filter:blur(10px);
+z-index:1000;
+}
+.logo{color:#00f5ff;}
+.menu-icon{font-size:26px;color:#ff0080;cursor:pointer;}
+.nav-links{
+list-style:none;
+position:fixed;
+top:0;
+right:-100%;
+width:250px;
+height:100%;
+background:black;
+padding-top:80px;
+transition:.4s;
+}
+.nav-links li{margin:20px 0;text-align:center;}
+.nav-links a{color:#00f5ff;text-decoration:none;}
+.nav-active{right:0;}
+
+/* HERO */
+.hero{
+min-height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:0 20px;
+}
+.hero h1{
+font-size:clamp(2rem,6vw,4rem);
+color:#ff0080;
+text-shadow:0 0 20px #ff0080;
+}
+.hero p{margin-top:10px;font-size:clamp(.9rem,2.5vw,1.2rem);}
+button{
+margin-top:20px;
+padding:12px 30px;
+border:2px solid #00f5ff;
+background:transparent;
+color:#00f5ff;
+cursor:pointer;
+}
+button:hover{background:#00f5ff;color:black;}
+
+.countdown{
+margin-top:20px;
+font-size:clamp(1rem,3vw,1.8rem);
+color:#ff0080;
+text-shadow:0 0 10px #ff0080,0 0 20px #ff0080;
+}
+
+/* VIDEO */
+.video-section{
+position:relative;
+width:100%;
+padding-top:56.25%;
+height:0;
+}
+.video-section video{
+position:absolute;
+top:0;left:0;
+width:100%;height:100%;
+object-fit:cover;
+}
+
+/* SECTION */
+section{
+padding:clamp(60px,8vw,120px) 5%;
+text-align:center;
+}
+.section-title{
+color:#ff0080;
+font-size:clamp(1.8rem,4vw,2.5rem);
+margin-bottom:40px;
+}
+
+/* GRID */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+}
+.card{
+border:2px solid #00f5ff;
+padding:25px;
+background:rgba(0,0,0,0.6);
+border-radius:10px;
+min-height:220px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+transition:.3s;
+text-decoration:none;
+color:white;
+}
+.card:hover{
+transform:translateY(-8px) scale(1.04);
+box-shadow:0 0 20px #00f5ff;
+}
+
+/* TEAM CARD */
+.team-card{
+border:2px solid #ff0080;
+box-shadow:0 0 15px rgba(255,0,128,.4);
+}
+
+/* FOOTER */
+footer{
+text-align:center;
+padding:40px;
+color:#777;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+.nav-links{width:100%;}
+}
+</style>
+</head>
+
+<body>
+
+<nav class="navbar">
+<div class="logo">BITD E-SUMMIT 2026</div>
+<div class="menu-icon" onclick="toggleMenu()">☰</div>
+<ul class="nav-links" id="navLinks">
+<li><a href="#events" onclick="toggleMenu()">Events</a></li>
+<li><a href="#speakers" onclick="toggleMenu()">Speakers</a></li>
+<li><a href="#sponsors" onclick="toggleMenu()">Sponsors</a></li>
+<li><a href="#team" onclick="toggleMenu()">Team</a></li>
+</ul>
+</nav>
+
+<div class="hero">
+<h1>BITD E-SUMMIT 2026</h1>
+<p>Entrepreneurship Development Cell, BITD presents</p>
+<button onclick="document.getElementById('events').scrollIntoView()">ENTER THE SUMMIT</button>
+<div id="countdown" class="countdown"></div>
+</div>
+
+<section class="video-section">
+<video autoplay muted loop playsinline>
+<source src="promo.mp4" type="video/mp4">
+</video>
+</section>
+
+<section id="events">
+<h2 class="section-title">Event Matrix</h2>
+<div class="grid">
+
+<a class="card" target="_blank"
+href="https://docs.google.com/forms/d/e/1FAIpQLScvtLb7XtljbCHgg9waLDJo8-jqo_Xjw9QqfcoUz8xHhsbYUA/viewform?usp=dialog">
+<h3>Speaker Conclave</h3>
+<p>Insights from visionary founders and industry leaders.</p>
+</a>
+
+<a class="card" target="_blank"
+href="https://docs.google.com/forms/d/e/1FAIpQLScvtLb7XtljbCHgg9waLDJo8-jqo_Xjw9QqfcoUz8xHhsbYUA/viewform?usp=dialog">
+<h3>Startup Expo</h3>
+<p>Showcase ideas and connect with investors.</p>
+</a>
+
+<a class="card" target="_blank"
+href="https://docs.google.com/forms/d/e/1FAIpQLScvtLb7XtljbCHgg9waLDJo8-jqo_Xjw9QqfcoUz8xHhsbYUA/viewform?usp=dialog">
+<h3>100 Rs Venture</h3>
+<p>Build a business with ₹100 challenge.</p>
+</a>
+
+<a class="card" target="_blank"
+href="https://docs.google.com/forms/d/e/1FAIpQLScvtLb7XtljbCHgg9waLDJo8-jqo_Xjw9QqfcoUz8xHhsbYUA/viewform?usp=dialog">
+<h3>Valo Showdown</h3>
+<p>Compete in esports battlefield.</p>
+</a>
+
+</div>
+</section>
+
+<section id="speakers">
+<h2 class="section-title">Our Speakers</h2>
+<div class="grid">
+<div class="card"><h3>Founder - StartupX</h3><p>Scaling From Zero to Unicorn</p></div>
+<div class="card"><h3>CEO - TechCorp</h3><p>Future of AI Innovation</p></div>
+<div class="card"><h3>Angel Investor</h3><p>What Investors Look For</p></div>
+</div>
+</section>
+
+<section id="sponsors">
+<h2 class="section-title">Our Sponsors</h2>
+<div class="grid">
+<div class="card">Title Sponsor</div>
+<div class="card">Gold Sponsor</div>
+<div class="card">Community Partner</div>
+</div>
+</section>
+
+<section id="team">
+<h2 class="section-title">Our Team</h2>
+<div class="grid">
+<div class="card team-card">Rahul Sharma<br>Convener</div>
+<div class="card team-card">Ananya Verma<br>Co-Convener</div>
+<div class="card team-card">Marketing Head</div>
+<div class="card team-card">Event Coordinator</div>
+<div class="card team-card">Sponsorship Lead</div>
+<div class="card team-card">Design Head</div>
+<div class="card team-card">Technical Head</div>
+<div class="card team-card">PR Head</div>
+<div class="card team-card">Operations Head</div>
+<div class="card team-card">Hospitality Head</div>
+</div>
+</section>
+
+<footer>Innovate Boldly. Execute Fearlessly.</footer>
+
+<script>
+function toggleMenu(){
+document.getElementById("navLinks").classList.toggle("nav-active");
+}
+
+// Countdown
+const eventDate=new Date("March 17, 2026 00:00:00").getTime();
+setInterval(function(){
+const now=new Date().getTime();
+const distance=eventDate-now;
+const d=Math.floor(distance/(1000*60*60*24));
+const h=Math.floor((distance%(1000*60*60*24))/(1000*60*60));
+const m=Math.floor((distance%(1000*60*60))/(1000*60));
+const s=Math.floor((distance%(1000*60))/1000);
+document.getElementById("countdown").innerHTML=
+d+"D "+h+"H "+m+"M "+s+"S";
+},1000);
+</script>
+
+</body>
+</html>
